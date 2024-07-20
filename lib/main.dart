@@ -24,7 +24,7 @@ List<String> foodTitles = [
   'Cajun',
   'Soul Food',
   'New York Food',
-  'New England Food'
+  'New England Foods'
 ];
 
 void main() async {
