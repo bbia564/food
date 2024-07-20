@@ -47,7 +47,9 @@ dependencies:
   image: ^4.2.0
   intl: ^0.19.0
   faker: ^2.1.0
-
+  flutter_launcher_icons: ^0.13.1
+  flutter_inappwebview: ^6.0.0
+  dio: ^5.4.3+1
 
 dev_dependencies:
   flutter_test:
@@ -60,16 +62,15 @@ dev_dependencies:
   # rules and activating additional ones.
   flutter_lints: ^3.0.0
   build_runner: ^2.4.8
-  flutter_launcher_icons: ^0.13.1
 
   # flutter pub run flutter_launcher_icons:main
 flutter_launcher_icons:
-  image_path: "assets/launcher.webp"
+  image_path: "assets/232.png"
   android: true
   ios: true
   web:
     generate: true
-    image_path: "assets/launcher.webp"
+    image_path: "assets/232.png"
     background_color: "#FFFFFF"
     theme_color: "#FFFFFF"
 

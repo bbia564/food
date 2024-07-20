@@ -3,7 +3,6 @@ import 'package:get/get.dart';
 import 'package:styled_widget/styled_widget.dart';
 import 'package:us_food/main.dart';
 import 'package:us_food/pages/food_first/food_item.dart';
-import 'package:us_food/router/food_names.dart';
 
 import 'food_first_logic.dart';
 
@@ -81,7 +80,7 @@ class FoodFirstPage extends GetView<FoodFirstLogic> {
                     height: 50,
                     alignment: Alignment.center,
                     child: const Text(
-                      'add-make',
+                      'Add Make',
                       style: TextStyle(
                           color: Colors.white,
                           fontSize: 14,
@@ -92,7 +91,7 @@ class FoodFirstPage extends GetView<FoodFirstLogic> {
                           color: primaryColor,
                           borderRadius: BorderRadius.circular(10))
                       .gestures(onTap: () {
-                    Get.toNamed(FoodNames.foodAdd,
+                    Get.toNamed('/food_add',
                             arguments: controller.selectedIndex)
                         ?.then((_) {
                       controller.getData();
@@ -131,7 +130,7 @@ class FoodFirstPage extends GetView<FoodFirstLogic> {
                         color: Colors.grey,
                       )
                     ].toRow().gestures(onTap: () {
-                      Get.toNamed(FoodNames.foodList,
+                      Get.toNamed('/food_list',
                               arguments: controller.selectedIndex)
                           ?.then((_) {
                         controller.getData();

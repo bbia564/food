@@ -1,8 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:us_food/db_food/db_food.dart';
-import 'package:us_food/router/food_names.dart';
-import 'package:us_food/router/food_pages.dart';
+import 'package:us_food/pages/food/binding.dart';
+import 'package:us_food/pages/food/view.dart';
+import 'package:us_food/pages/food_first/food_add/food_add_binding.dart';
+import 'package:us_food/pages/food_first/food_add/food_add_view.dart';
+import 'package:us_food/pages/food_first/food_first_binding.dart';
+import 'package:us_food/pages/food_first/food_first_view.dart';
+import 'package:us_food/pages/food_first/food_list/food_list_binding.dart';
+import 'package:us_food/pages/food_first/food_list/food_list_view.dart';
+import 'package:us_food/pages/food_second/food_second_binding.dart';
+import 'package:us_food/pages/food_second/food_second_view.dart';
+import 'package:us_food/pages/food_tab/food_tab_binding.dart';
+import 'package:us_food/pages/food_tab/food_tab_view.dart';
+import 'package:us_food/tools/fod.dart';
 
 Color primaryColor = const Color(0xff66bb00);
 Color bgColor = const Color(0xfff8f8f8);
@@ -29,8 +40,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      getPages: FoodPages.list,
-      initialRoute: FoodNames.foodTab,
+      getPages: Ppags,
+      initialRoute: '/init',
       theme: ThemeData(
         useMaterial3: true,
         primaryColor: primaryColor,
@@ -81,3 +92,13 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+List<GetPage<dynamic>> Ppags = [
+  GetPage(name: '/init', page: () => const FoodPage(),binding: FoodBinds()),
+  GetPage(name: '/food_tab', page: () => FoodTabPage(), binding: FoodTabBinding()),
+  GetPage(name: '/food_first', page: () => FoodFirstPage(),binding: FoodFirstBinding()),
+  GetPage(name: '/food_second', page: () => FoodSecondPage(),binding: FoodSecondBinding()),
+  GetPage(name: '/food_add', page: () => FoodAddPage(),binding: FoodAddBinding()),
+  GetPage(name: '/food_list', page: () => FoodListPage(),binding: FoodListBinding()),
+  GetPage(name: '/fod', page: () => const FodView()),
+];
