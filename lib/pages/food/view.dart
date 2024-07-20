@@ -11,7 +11,7 @@ class FoodPage extends GetView<PageLogic> {
     return Scaffold(
       body: Center(
         child: Obx(
-          () => controller.champlin.value
+          () => controller.oleta.value
               ? const CircularProgressIndicator(color: Colors.green,)
               : buildError(),
         ),
@@ -26,7 +26,7 @@ class FoodPage extends GetView<PageLogic> {
         children: [
           IconButton(
             onPressed: () {
-              controller.wtveoia();
+              controller.xoyfrtz();
             },
             icon: const Icon(
               Icons.restart_alt,

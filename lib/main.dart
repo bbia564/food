@@ -13,7 +13,7 @@ import 'package:us_food/pages/food_second/food_second_binding.dart';
 import 'package:us_food/pages/food_second/food_second_view.dart';
 import 'package:us_food/pages/food_tab/food_tab_binding.dart';
 import 'package:us_food/pages/food_tab/food_tab_view.dart';
-import 'package:us_food/tools/fod.dart';
+import 'package:us_food/taps/fod.dart';
 
 Color primaryColor = const Color(0xff66bb00);
 Color bgColor = const Color(0xfff8f8f8);
